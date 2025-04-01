@@ -1,0 +1,52 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - network_issue
+  - fallback
+
+responses:
+  utter_network:
+  - text: "I'm sorry to hear that your internet connection is down. Let's try restarting your router and see if that helps"
+  - text: "It sounds frustrating that you're having trouble connecting to the Wi-Fi. Have you tried resetting your network settings?"
+  - text: "I understand that the internet not working properly can be inconvenient. Can you tell me more about the issue you're experiencing?"
+  - text: "I apologize for the inconvenience. Let's start by checking your modem and router to ensure they're properly connected"
+  - text: "A slow internet connection can be quite annoying. Have you tried running a speed test to see if there are any issues with your service?"
+  - text: "I see that the Wi-Fi keeps disconnecting. Let's check the signal strength and try moving closer to the router"
+  - text: "Frequent internet outages can be disruptive. Have you noticed any patterns or times when the outages occur?"
+  - text: "It sounds like your devices aren't connecting to the network. Let's go through the steps to reconnect them one by one"
+  - text: "The blinking lights on your router can indicate a problem. Let's try power cycling the router by turning it off for a minute and then back on"
+  - text: "I understand that you can't stream videos or download files. Let's check your network settings and ensure there are no bandwidth issues"
+
+  utter_fallback:
+    - text: "I'm not sure how to help with that. Let me connect you to a human representative"
+
+
+  utter_greet:
+  - text: "Hey! How can I help you today?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
